@@ -1,0 +1,11 @@
+{% extends "mail/base.txt" %}
+
+{% block subject %}
+Ваша работа одобрена
+{% endblock %}
+
+{% block content %}
+Здравствуйте!
+
+Ваша работа №{{ work_id }} была одобрена модератором.
+{% endblock %}

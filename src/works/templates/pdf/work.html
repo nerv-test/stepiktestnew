@@ -1,0 +1,10 @@
+{% extends 'pdf/boilerplate.html' %}
+{% block content %}
+<div>
+  <h1>{{ work.username }}</h1>
+  <h2>{{ work.email }}</h2>
+  {% for image in work.images.all %}
+    <img src="{{ image.thumbnail.url }}"/>
+  {% endfor %}
+</div>
+{% endblock %}

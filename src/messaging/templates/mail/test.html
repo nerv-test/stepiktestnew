@@ -1,0 +1,21 @@
+{% extends "mail/base.txt" %}
+{% load humanize %}
+
+{% block subject %}
+Проверка сабжекта для {{username}}
+{% endblock %}
+
+{% block content %}
+  <p>Hi {{ full_name }},</p>
+
+  <p>You just signed up for my website, using:
+      <dl>
+        <dt>username</dt><dd>{{ username }}</dd>
+        <dt>join date</dt><dd>{{ register_date }}</dd>
+        <dt>Current time</dt><dd> {{ time|date:"d.m.Y H:i" }}</dd>
+        <dt>Current time in russian (should be in english)</dt><dd>{{ time|naturalday }}</dd>
+      </dl>
+  </p>
+
+  <p>Thanks, you rock!</p>
+{% endblock %}
